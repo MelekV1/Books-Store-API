@@ -1,0 +1,1 @@
+﻿DBFirst : Scaffold-DbContext -Connection Name=BookStoresDB Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
