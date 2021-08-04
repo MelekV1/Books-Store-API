@@ -40,17 +40,37 @@ namespace BooksStoreAPI.Controllers
 
             return publisher;
         }
+        
         // GET: api/Publishers/GetPublisherDetails/5
         [HttpGet("GetPublisherDetails/{id}")]
-        public ActionResult<Publisher> GetPublisherDetails(int id)
+        public async Task<ActionResult<Publisher>> GetPublisherDetails(int id)
         {
-            var publisher = _context.Publishers
-                .Where(p => p.PubId == id)
-                .Include(p => p.Books)
-                    .ThenInclude(b => b.Sales)
-                .Include(p => p.Users)
-                    .ThenInclude(u => u.Role)
-                .FirstOrDefault();
+            //Eager Loading
+            //var publisher = await _context.Publishers
+            //                                .Include(pub => pub.Users)
+            //                                .Include(pub => pub.Books)
+            //                                    .ThenInclude(book => book.Sales)
+            //                                .Where(pub => pub.PubId == id)
+            //                                .FirstOrDefaultAsync();
+
+            //Explicit Loading
+            var publisher = await _context.Publishers.SingleAsync(pub => pub.PubId == Convert.ToInt32(id));
+
+            _context.Entry(publisher)
+                    .Collection(pub => pub.Users)
+                    .Query()
+                    .Where(usr => usr.EmailAddress.Contains("karin"))
+                    .Load();
+
+            _context.Entry(publisher)
+                    .Collection(pub => pub.Books)
+                    .Query()
+                    .Include(book => book.Sales)
+                    .Load();
+
+            //var user = await _context.Users.SingleAsync(u => u.UserId == 1);
+            //_context.Entry(user)
+            //    .Reference(usr => usr.Role);
 
             if (publisher == null)
             {
