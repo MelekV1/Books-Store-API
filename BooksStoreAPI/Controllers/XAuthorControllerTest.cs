@@ -10,7 +10,7 @@ namespace BooksStoreAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthorController : ControllerBase
+    public class XAuthorControllerTest : ControllerBase
     {
         [HttpGet]
         public IEnumerable<Author> Get()
