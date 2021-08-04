@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xxyVe60p6Zt4dqmUAW5MUGCtbEHkbi475D0Uz9byOHbEDi1qgQ7qAua0DKCvXJtsjn+dZrrexzPXlCQbrGgSug==",
+  "dgSpecHash": "AqQLIqEGMZTkOZ5/Z7G7m5qDbJabtlkcmnSPQGCU9PFKOIN4gSFn9NxL3NWauBgtTLWsDOFrV0kj2jJyGWjzsg==",
   "success": true,
   "projectFilePath": "A:\\user\\Learning Assets\\.NET-CORE\\BooksStoreAPI\\BooksStoreAPI\\BooksStoreAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\bricelam.entityframeworkcore.pluralizer\\1.0.0\\bricelam.entityframeworkcore.pluralizer.1.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

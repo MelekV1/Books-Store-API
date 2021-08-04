@@ -2,7 +2,6 @@ A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcorea
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\appsettings.json
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.exe
-A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.csprojAssemblyReference.cache
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.AssemblyInfoInputs.cache
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.AssemblyInfo.cs
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.RazorTargetAssemblyInfo.cache
@@ -54,8 +53,11 @@ A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcorea
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.dll
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.pdb
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.csproj.CoreCompileInputs.cache
-A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.MvcApplicationPartsAssemblyInfo.cache
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.dll
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.pdb
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.genruntimeconfig.cache
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Bricelam.EntityFrameworkCore.Pluralizer.dll
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.csprojAssemblyReference.cache
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.csproj.CoreCompileInputs.cache
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.MvcApplicationPartsAssemblyInfo.cache
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\EFCorePluralizer.cs
