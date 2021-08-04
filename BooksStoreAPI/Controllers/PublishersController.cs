@@ -40,6 +40,25 @@ namespace BooksStoreAPI.Controllers
 
             return publisher;
         }
+        // GET: api/Publishers/GetPublisherDetails/5
+        [HttpGet("GetPublisherDetails/{id}")]
+        public ActionResult<Publisher> GetPublisherDetails(int id)
+        {
+            var publisher = _context.Publishers
+                .Where(p => p.PubId == id)
+                .Include(p => p.Books)
+                    .ThenInclude(b => b.Sales)
+                .Include(p => p.Users)
+                    .ThenInclude(u => u.Role)
+                .FirstOrDefault();
+
+            if (publisher == null)
+            {
+                return NotFound();
+            }
+
+            return publisher;
+        }
 
         // PUT: api/Publishers/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
