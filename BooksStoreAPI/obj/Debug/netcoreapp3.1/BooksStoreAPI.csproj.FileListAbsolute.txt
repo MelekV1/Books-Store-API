@@ -48,3 +48,14 @@ A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcorea
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.csproj.CopyComplete
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.deps.json
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.runtimeconfig.json
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.runtimeconfig.dev.json
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.dll
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\BooksStoreAPI.pdb
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.csproj.CoreCompileInputs.cache
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.MvcApplicationPartsAssemblyInfo.cache
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.dll
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.pdb
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.genruntimeconfig.cache
