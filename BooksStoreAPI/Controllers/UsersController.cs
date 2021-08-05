@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BooksStoreAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BooksStoreAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UsersController : ControllerBase
     {
         private readonly BookStoresDBContext _context;
@@ -21,14 +23,14 @@ namespace BooksStoreAPI.Controllers
         }
 
         // GET: api/Users
-        [HttpGet]
+        [HttpGet("GetUsers")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
         }
 
         // GET: api/Users/5
-        [HttpGet("{id}")]
+        [HttpGet("GetUser/{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -40,6 +42,57 @@ namespace BooksStoreAPI.Controllers
 
             return user;
         }
+
+        // GET: api/Users?username=name&password=password
+        //[HttpGet("GetUser")]
+        //public async Task<ActionResult<User>> GetUser(string emailAddress, string password)
+        //{
+        //    var user =  await _context.Users.FirstOrDefaultAsync(u => u.EmailAddress == emailAddress && u.Password == password);
+
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return user;
+        //}
+
+        //GET: api/Users
+        [HttpGet("GetUser")]
+        public async Task<ActionResult<User>> GetUser()
+        {
+            string emailAddress = HttpContext.User.Identity.Name;
+            var user = await _context.Users
+                .Where(u => u.EmailAddress == emailAddress)
+                .FirstOrDefaultAsync();
+
+            user.Password = null;
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
+
+        // GET: api/Users/5
+        [HttpGet("GetUserDetails/{id}")]
+        public async Task<ActionResult<User>> GetUserDetails(int id)
+        {
+            var user = await _context.Users.Include(u => u.Role)
+                                            .Where(u => u.UserId == id)
+                                            .FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
 
         // PUT: api/Users/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
