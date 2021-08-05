@@ -13,58 +13,59 @@ using System.Threading.Tasks;
 
 namespace BooksStoreAPI.Handlers
 {
-    public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
+    public class BasicAuthenticationHandler 
+        // : AuthenticationHandler<AuthenticationSchemeOptions>
     {
-        private readonly BookStoresDBContext _context;
+        //private readonly BookStoresDBContext _context;
 
 
-        public BasicAuthenticationHandler(
-            IOptionsMonitor<AuthenticationSchemeOptions> options,
-            ILoggerFactory logger, 
-            UrlEncoder encoder,
-            ISystemClock clock,
-            BookStoresDBContext context) 
-            : base(options, logger, encoder, clock)
-        {
-            _context = context;
-        }
+        //public BasicAuthenticationHandler(
+        //    IOptionsMonitor<AuthenticationSchemeOptions> options,
+        //    ILoggerFactory logger, 
+        //    UrlEncoder encoder,
+        //    ISystemClock clock,
+        //    BookStoresDBContext context) 
+        //    : base(options, logger, encoder, clock)
+        //{
+        //    _context = context;
+        //}
     
-        protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
-        {
-            if (!Request.Headers.ContainsKey("Authorization"))
-                return AuthenticateResult.Fail("Authorization header was not found");
-            try
-            {
-                var authenticationHeaderValue = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
-                var bytes = Convert.FromBase64String(authenticationHeaderValue.Parameter);
-                string[] credentials = Encoding.UTF8.GetString(bytes).Split(":");
-                string emailAddress = credentials[0];
-                string password = credentials[1];
+        //protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
+        //{
+        //    if (!Request.Headers.ContainsKey("Authorization"))
+        //        return AuthenticateResult.Fail("Authorization header was not found");
+        //    try
+        //    {
+        //        var authenticationHeaderValue = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
+        //        var bytes = Convert.FromBase64String(authenticationHeaderValue.Parameter);
+        //        string[] credentials = Encoding.UTF8.GetString(bytes).Split(":");
+        //        string emailAddress = credentials[0];
+        //        string password = credentials[1];
 
-                User user = _context.Users
-                    .Where(user => user.EmailAddress == emailAddress && user.Password == password)
-                    .FirstOrDefault();
+        //        User user = _context.Users
+        //            .Where(user => user.EmailAddress == emailAddress && user.Password == password)
+        //            .FirstOrDefault();
 
-                if (user == null)
-                    return AuthenticateResult.Fail("Invalid username or password");
-                else
-                {
-                    var claims = new[] { new Claim(ClaimTypes.Name, user.EmailAddress) };
-                    var identity = new ClaimsIdentity(claims, Scheme.Name);
-                    var principal = new ClaimsPrincipal(identity);
-                    var ticket = new AuthenticationTicket(principal, Scheme.Name);
+        //        if (user == null)
+        //            return AuthenticateResult.Fail("Invalid username or password");
+        //        else
+        //        {
+        //            var claims = new[] { new Claim(ClaimTypes.Name, user.EmailAddress) };
+        //            var identity = new ClaimsIdentity(claims, Scheme.Name);
+        //            var principal = new ClaimsPrincipal(identity);
+        //            var ticket = new AuthenticationTicket(principal, Scheme.Name);
 
-                    return AuthenticateResult.Success(ticket);
-                }
-            }
-            catch (Exception)
-            {
+        //            return AuthenticateResult.Success(ticket);
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
 
-                return AuthenticateResult.Fail("Need to implement");
-            }
+        //        return AuthenticateResult.Fail("Need to implement");
+        //    }
            
 
-            //return AuthenticateResult.Fail("Fail");
-        }
+        //    //return AuthenticateResult.Fail("Fail");
+        //}
     }
 }
