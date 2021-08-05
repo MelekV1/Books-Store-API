@@ -7,19 +7,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BooksStoreAPI.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 
 namespace BooksStoreAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class UsersController : ControllerBase
     {
         private readonly BookStoresDBContext _context;
+        private readonly JWTSettings _jwtsettings;
 
-        public UsersController(BookStoresDBContext context)
+        public UsersController(BookStoresDBContext context, IOptions<JWTSettings> jwtsettings)
         {
             _context = context;
+            _jwtsettings = jwtsettings.Value;
         }
 
         // GET: api/Users
@@ -91,6 +98,38 @@ namespace BooksStoreAPI.Controllers
             }
 
             return user;
+        }
+
+        //GET : api/Users
+        [HttpGet("Login")]
+        public async Task<ActionResult<UserWithToken>> Login([FromBody]User user)
+        {
+            user = await _context.Users
+                .Include(u => u.Role)
+                .Where(user => user.EmailAddress == user.EmailAddress
+                && user.Password == user.Password)
+                .FirstOrDefaultAsync();
+
+            UserWithToken userWithToken = new UserWithToken(user);
+            if (userWithToken == null)
+                return NotFound();
+
+            //Sign token here 
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_jwtsettings.SecretKey);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim(ClaimTypes.Name,user.EmailAddress)
+                }),
+                Expires = DateTime.UtcNow.AddMonths(6),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            userWithToken.AccessToken = tokenHandler.WriteToken(token);
+            return userWithToken;
         }
 
 

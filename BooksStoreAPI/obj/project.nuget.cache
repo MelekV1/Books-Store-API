@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SyHhyaslHcYWTXD6tJMSoDX8S1viR3HknS6s82NIsfXAPA3fQ9lYQt/N92ObTfZcs4Eb/dRwPJVtFM1R6mWCUA==",
+  "dgSpecHash": "8iqpdLPJNSE7uLAMdbnNN5fCkaMUfQzaMG9qqaLGfQwiGvk4pOH+xs+7YYIuYdkxzTZdVfJXE5b6AX7CxNkcwg==",
   "success": true,
   "projectFilePath": "A:\\user\\Learning Assets\\.NET-CORE\\BooksStoreAPI\\BooksStoreAPI\\BooksStoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\bricelam.entityframeworkcore.pluralizer\\1.0.0\\bricelam.entityframeworkcore.pluralizer.1.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.17\\microsoft.aspnetcore.authentication.jwtbearer.3.1.17.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.17\\microsoft.aspnetcore.jsonpatch.3.1.17.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.17\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.17.nupkg.sha512",

@@ -41,7 +41,9 @@ namespace BooksStoreAPI.Handlers
                 string emailAddress = credentials[0];
                 string password = credentials[1];
 
-                User user = _context.Users.FirstOrDefault(user => user.EmailAddress == emailAddress && user.Password == password);
+                User user = _context.Users
+                    .Where(user => user.EmailAddress == emailAddress && user.Password == password)
+                    .FirstOrDefault();
 
                 if (user == null)
                     return AuthenticateResult.Fail("Invalid username or password");

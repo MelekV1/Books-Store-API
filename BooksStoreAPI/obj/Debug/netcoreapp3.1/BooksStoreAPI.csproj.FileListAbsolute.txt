@@ -154,6 +154,7 @@ A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcorea
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.csproj.CoreCompileInputs.cache
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\BooksStoreAPI.MvcApplicationPartsAssemblyInfo.cache
 A:\user\Learning Assets\.NET-CORE\BooksStoreAPI\BooksStoreAPI\obj\Debug\netcoreapp3.1\EFCorePluralizer.cs
